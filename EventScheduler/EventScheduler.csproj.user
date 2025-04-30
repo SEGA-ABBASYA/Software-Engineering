@@ -10,5 +10,8 @@
     <Compile Update="RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UpcomingEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

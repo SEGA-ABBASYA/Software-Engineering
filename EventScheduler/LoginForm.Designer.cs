@@ -116,6 +116,7 @@
             Controls.Add(title_label);
             Name = "LoginForm";
             Text = "Welcome!";
+            FormClosing += LoginForm_FormClosing;
             Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();

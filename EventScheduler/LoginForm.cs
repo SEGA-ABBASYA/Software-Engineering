@@ -60,5 +60,10 @@ namespace EventScheduler
               }
             */
         }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // conn.Dispose();
+        }
     }
 }

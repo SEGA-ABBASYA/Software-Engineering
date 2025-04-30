@@ -148,6 +148,7 @@
             Controls.Add(register_label);
             Name = "RegisterForm";
             Text = "Register";
+            FormClosing += RegisterForm_FormClosing;
             Load += RegisterForm_Load;
             ResumeLayout(false);
             PerformLayout();

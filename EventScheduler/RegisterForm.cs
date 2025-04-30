@@ -66,5 +66,9 @@ namespace EventScheduler
             */
         }
 
+        private void RegisterForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // conn.Dispose();
+        }
     }
 }

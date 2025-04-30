@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "D:\\Code\\software\\Software-Engineering\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|d:\\code\\software\\software-engineering\\eventscheduler\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|solutionrelative:eventscheduler\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|d:\\code\\software\\software-engineering\\eventscheduler\\upcomingevents.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|solutionrelative:eventscheduler\\upcomingevents.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|d:\\code\\software\\software-engineering\\eventscheduler\\upcomingevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|solutionrelative:eventscheduler\\upcomingevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|d:\\code\\software\\software-engineering\\eventscheduler\\upcomingevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|solutionrelative:eventscheduler\\upcomingevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|d:\\code\\software\\software-engineering\\eventscheduler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|solutionrelative:eventscheduler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|d:\\code\\software\\software-engineering\\eventscheduler\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|solutionrelative:eventscheduler\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|D:\\Code\\software\\Software-Engineering\\eventscheduler\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|solutionrelative:eventscheduler\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|D:\\Code\\software\\Software-Engineering\\eventscheduler\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E2CC2669-9369-4B08-B66B-13704D5427C8}|EventScheduler\\EventScheduler.csproj|solutionrelative:eventscheduler\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,69 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\LoginForm.cs",
-              "RelativeDocumentMoniker": "EventScheduler\\LoginForm.cs",
-              "ToolTip": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\LoginForm.cs [Design]",
-              "RelativeToolTip": "EventScheduler\\LoginForm.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "UpcomingEvents.Designer.cs",
+              "DocumentMoniker": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\UpcomingEvents.Designer.cs",
+              "RelativeDocumentMoniker": "EventScheduler\\UpcomingEvents.Designer.cs",
+              "ToolTip": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\UpcomingEvents.Designer.cs*",
+              "RelativeToolTip": "EventScheduler\\UpcomingEvents.Designer.cs*",
+              "ViewState": "AgIAADYAAAAAAAAAAAAYwEIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T11:45:51.137Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RegisterForm.cs [Design]",
-              "DocumentMoniker": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\RegisterForm.cs",
-              "RelativeDocumentMoniker": "EventScheduler\\RegisterForm.cs",
-              "ToolTip": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\RegisterForm.cs [Design]",
-              "RelativeToolTip": "EventScheduler\\RegisterForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T10:51:48.012Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\Program.cs",
-              "RelativeDocumentMoniker": "EventScheduler\\Program.cs",
-              "ToolTip": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\Program.cs*",
-              "RelativeToolTip": "EventScheduler\\Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T10:31:43.517Z",
+              "WhenOpened": "2025-04-30T12:36:55.588Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RegisterForm.cs",
-              "DocumentMoniker": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\RegisterForm.cs",
-              "RelativeDocumentMoniker": "EventScheduler\\RegisterForm.cs",
-              "ToolTip": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\RegisterForm.cs",
-              "RelativeToolTip": "EventScheduler\\RegisterForm.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAwwCoAAAADAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "UpcomingEvents.cs",
+              "DocumentMoniker": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\UpcomingEvents.cs",
+              "RelativeDocumentMoniker": "EventScheduler\\UpcomingEvents.cs",
+              "ToolTip": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\UpcomingEvents.cs",
+              "RelativeToolTip": "EventScheduler\\UpcomingEvents.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T11:25:46.208Z",
+              "WhenOpened": "2025-04-30T12:17:55.025Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LoginForm.cs",
-              "DocumentMoniker": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\LoginForm.cs",
-              "RelativeDocumentMoniker": "EventScheduler\\LoginForm.cs",
-              "ToolTip": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\LoginForm.cs",
-              "RelativeToolTip": "EventScheduler\\LoginForm.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAwwD8AAAABAAAAAAAAAA==",
+              "Title": "UpcomingEvents.cs [Design]",
+              "DocumentMoniker": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\UpcomingEvents.cs",
+              "RelativeDocumentMoniker": "EventScheduler\\UpcomingEvents.cs",
+              "ToolTip": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\UpcomingEvents.cs [Design]",
+              "RelativeToolTip": "EventScheduler\\UpcomingEvents.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T09:54:34.659Z",
+              "WhenOpened": "2025-04-30T11:37:47.941Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\Program.cs",
+              "RelativeDocumentMoniker": "EventScheduler\\Program.cs",
+              "ToolTip": "D:\\Code\\software\\Software-Engineering\\EventScheduler\\Program.cs",
+              "RelativeToolTip": "EventScheduler\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T10:31:43.517Z",
               "EditorCaption": ""
             }
           ]

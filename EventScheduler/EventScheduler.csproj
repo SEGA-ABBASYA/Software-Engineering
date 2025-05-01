@@ -68,6 +68,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenerateReport1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateReport1Form.Designer.cs">
+      <DependentUpon>GenerateReport1Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="GenerateReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateReport1Form.resx">
+      <DependentUpon>GenerateReport1Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenerateReportForm.resx">
       <DependentUpon>GenerateReportForm.cs</DependentUpon>

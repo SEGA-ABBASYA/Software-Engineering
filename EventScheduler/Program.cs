@@ -16,7 +16,7 @@ namespace EventScheduler
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GenerateReportForm());
+            Application.Run(new GenerateReport1Form());
         }
     }
 }

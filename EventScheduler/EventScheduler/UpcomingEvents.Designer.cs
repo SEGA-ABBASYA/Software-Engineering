@@ -30,6 +30,7 @@ namespace EventScheduler
         private void InitializeComponent()
         {
             this.upcoming_datagridview = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.upcoming_datagridview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,11 +42,22 @@ namespace EventScheduler
             this.upcoming_datagridview.Size = new System.Drawing.Size(716, 411);
             this.upcoming_datagridview.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(633, 478);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UpcomingEvents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(746, 534);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.upcoming_datagridview);
             this.Name = "UpcomingEvents";
             this.Text = "UpcomingEvents";
@@ -59,5 +71,6 @@ namespace EventScheduler
         #endregion
 
         private System.Windows.Forms.DataGridView upcoming_datagridview;
+        private System.Windows.Forms.Button button1;
     }
 }

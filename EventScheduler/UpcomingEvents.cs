@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
+using System.Net;
+using System.Net.Mail;
+using System.Timers;
 
 namespace EventScheduler
 {
@@ -16,6 +19,7 @@ namespace EventScheduler
     {
         string ordb = "Data Source=orcl;User Id=ziad;Password=ziad";
         OracleConnection conn;
+        private System.Timers.Timer dailyTimer;
         public UpcomingEvents()
         {
             InitializeComponent();
@@ -59,7 +63,21 @@ namespace EventScheduler
                 MessageBox.Show("Error loading events: " + ex.Message);
             }
 
-
+            //dailyTimer = new System.Timers.Timer(86400000);
+            //dailyTimer.AutoReset = true;
+            //dailyTimer.Elapsed += (s, ev) =>
+            //{
+            //    try
+            //    {
+            //        SendTomorrowReminders();
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show($"Error while sending reminder: {ex.Message}");
+            //    }
+            //};
+            //dailyTimer.Start();
+            SendTomorrowReminders();
         }
 
         private void UpcomingEvents_FormClosing(object sender, FormClosingEventArgs e)
@@ -70,6 +88,44 @@ namespace EventScheduler
         private void button1_Click(object sender, EventArgs e)
         {
             //
+        }
+
+        public void SendEmail(string email, string subject, string body)
+        {
+            MailAddress from = new MailAddress("iixcellz25@gmail.com","SEGA-ABBASYA");
+            MailAddress to = new MailAddress(email);
+            MailMessage message = new MailMessage(from, to)
+            {
+                Subject = subject,
+                Body = body,
+                IsBodyHtml = true
+            };
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+            client.Credentials = new NetworkCredential("iixcellz25@gmail.com", "awqz qczf wwlt qvcu");
+            client.EnableSsl = true;
+
+            client.Send(message);
+
+        }
+        public void SendTomorrowReminders()
+        {
+            OracleConnection conn = new OracleConnection(ordb);
+            OracleCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "get_events_participants";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("result_cursor", OracleDbType.RefCursor)
+                          .Direction = ParameterDirection.Output;
+
+            conn.Open();
+            var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                string eventName = reader.GetString(0);    // e.name
+                string email = reader.GetString(1);    // u.email
+                string subject = $"Reminder: {eventName} is tomorrow";
+                string body = $"Don’t forget your event “{eventName}” tomorrow";
+                SendEmail(email, subject, body);
+            }
         }
     }
 }

@@ -16,14 +16,14 @@ namespace EventScheduler {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Report : ReportClass {
+    public class CrystalReport1 : ReportClass {
         
-        public Report() {
+        public CrystalReport1() {
         }
         
         public override string ResourceName {
             get {
-                return "Report.rpt";
+                return "CrystalReport1.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace EventScheduler {
         
         public override string FullResourceName {
             get {
-                return "EventScheduler.Report.rpt";
+                return "EventScheduler.CrystalReport1.rpt";
             }
             set {
                 // Do nothing
@@ -103,28 +103,12 @@ namespace EventScheduler {
                 return this.ReportDefinition.Sections[6];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Minimmum_Attendees {
-            get {
-                return this.DataDefinition.ParameterFields[0];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Location {
-            get {
-                return this.DataDefinition.ParameterFields[1];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedReport : Component, ICachedReport {
+    public class CachedCrystalReport1 : Component, ICachedReport {
         
-        public CachedReport() {
+        public CachedCrystalReport1() {
         }
         
         [Browsable(false)]
@@ -161,7 +145,7 @@ namespace EventScheduler {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Report rpt = new Report();
+            CrystalReport1 rpt = new CrystalReport1();
             rpt.Site = this.Site;
             return rpt;
         }

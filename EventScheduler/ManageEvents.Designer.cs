@@ -32,6 +32,7 @@ namespace EventScheduler
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.back_btn = new System.Windows.Forms.Button();
             this.save_btn = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@ namespace EventScheduler
             // 
             // back_btn
             // 
-            this.back_btn.Location = new System.Drawing.Point(684, 457);
+            this.back_btn.Location = new System.Drawing.Point(505, 457);
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(75, 23);
             this.back_btn.TabIndex = 1;
@@ -55,7 +56,7 @@ namespace EventScheduler
             // 
             // save_btn
             // 
-            this.save_btn.Location = new System.Drawing.Point(13, 457);
+            this.save_btn.Location = new System.Drawing.Point(127, 457);
             this.save_btn.Name = "save_btn";
             this.save_btn.Size = new System.Drawing.Size(75, 23);
             this.save_btn.TabIndex = 2;
@@ -63,11 +64,22 @@ namespace EventScheduler
             this.save_btn.UseVisualStyleBackColor = true;
             this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(322, 457);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // ManageEvents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 509);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.save_btn);
             this.Controls.Add(this.back_btn);
             this.Controls.Add(this.dataGrid);
@@ -84,5 +96,6 @@ namespace EventScheduler
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.Button back_btn;
         private System.Windows.Forms.Button save_btn;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

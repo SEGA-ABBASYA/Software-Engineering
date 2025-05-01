@@ -65,7 +65,6 @@ namespace EventScheduler
             this.label1.Size = new System.Drawing.Size(157, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Minimmun Number of Attendees";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -75,7 +74,6 @@ namespace EventScheduler
             this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Location Name";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // ReportViewer
             // 

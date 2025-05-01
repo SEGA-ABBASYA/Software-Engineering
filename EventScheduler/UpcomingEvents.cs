@@ -33,12 +33,14 @@ namespace EventScheduler
                 conn = new OracleConnection(ordb);
                 cmd.Connection = conn;
                 conn.Open();
+                string check = "upcoming";
                 cmd.CommandText = @"SELECT *
                                     FROM events_table
-                                    WHERE event_date > SYSDATE
+                                    WHERE event_date > SYSDATE and status = :status_parm
                                     ORDER BY priority desc";
 
                 cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add("status_param", OracleDbType.Varchar2).Value = check;
                 OracleDataReader reader = cmd.ExecuteReader();
                 // Setup DataGridView
                 upcoming_datagridview.Rows.Clear();
@@ -87,7 +89,7 @@ namespace EventScheduler
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //
+            this.Close();
         }
 
         public void SendEmail(string email, string subject, string body)

@@ -39,6 +39,7 @@ namespace EventScheduler
             builder = new OracleCommandBuilder(adapter);
             check_overdue();
             adapter.Update(ds.Tables[0]);
+            MessageBox.Show("Updates Saved");
 
         }
 
@@ -60,10 +61,44 @@ namespace EventScheduler
                     gridRow.DefaultCellStyle.BackColor = Color.Red;
             }
         }
-       
+
 
         private void back_btn_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGrid.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGrid.SelectedRows)
+                {
+                    if (!row.IsNewRow)
+                    {
+                        foreach (DataRow dr in ds.Tables[0].Rows)
+                        {
+                            if (dr["id"].ToString() == row.Cells["id"].Value.ToString())
+                            {
+                                dr.Delete();
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                builder = new OracleCommandBuilder(adapter);
+                adapter.Update(ds.Tables[0]);
+
+                ds.Tables[0].AcceptChanges();
+                dataGrid.DataSource = ds.Tables[0];
+
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.");
+            }
+            check_overdue();
         }
     }
 }

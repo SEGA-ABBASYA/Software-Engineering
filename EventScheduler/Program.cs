@@ -16,7 +16,7 @@ namespace EventScheduler
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManageEvents());
+            Application.Run(new Form1());
         }
     }
 }

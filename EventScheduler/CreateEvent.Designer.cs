@@ -41,6 +41,7 @@ namespace EventScheduler
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.back_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numFees)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@ namespace EventScheduler
             // 
             // dtpDate
             // 
-            this.dtpDate.Location = new System.Drawing.Point(290, 227);
+            this.dtpDate.Location = new System.Drawing.Point(305, 227);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(192, 20);
             this.dtpDate.TabIndex = 5;
@@ -75,7 +76,7 @@ namespace EventScheduler
             // 
             // btnAddEvent
             // 
-            this.btnAddEvent.Location = new System.Drawing.Point(234, 365);
+            this.btnAddEvent.Location = new System.Drawing.Point(145, 360);
             this.btnAddEvent.Name = "btnAddEvent";
             this.btnAddEvent.Size = new System.Drawing.Size(116, 63);
             this.btnAddEvent.TabIndex = 8;
@@ -86,7 +87,7 @@ namespace EventScheduler
             // lstOverlapps
             // 
             this.lstOverlapps.FormattingEnabled = true;
-            this.lstOverlapps.Location = new System.Drawing.Point(476, 343);
+            this.lstOverlapps.Location = new System.Drawing.Point(305, 340);
             this.lstOverlapps.Name = "lstOverlapps";
             this.lstOverlapps.Size = new System.Drawing.Size(188, 95);
             this.lstOverlapps.TabIndex = 9;
@@ -143,11 +144,22 @@ namespace EventScheduler
             this.label6.TabIndex = 16;
             this.label6.Text = "Fees";
             // 
+            // back_btn
+            // 
+            this.back_btn.Location = new System.Drawing.Point(548, 360);
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Size = new System.Drawing.Size(116, 63);
+            this.back_btn.TabIndex = 17;
+            this.back_btn.Text = "Back";
+            this.back_btn.UseVisualStyleBackColor = true;
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            // 
             // CreateEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(830, 511);
+            this.Controls.Add(this.back_btn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -183,5 +195,6 @@ namespace EventScheduler
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button back_btn;
     }
 }

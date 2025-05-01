@@ -39,6 +39,7 @@ namespace EventScheduler
             builder = new OracleCommandBuilder(adapter);
             check_overdue();
             adapter.Update(ds.Tables[0]);
+            MessageBox.Show("Updates Saved");
 
         }
 
@@ -64,6 +65,7 @@ namespace EventScheduler
 
         private void back_btn_Click(object sender, EventArgs e)
         {
+            this.Close();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -90,6 +92,7 @@ namespace EventScheduler
 
                 ds.Tables[0].AcceptChanges();
                 dataGrid.DataSource = ds.Tables[0];
+
             }
             else
             {

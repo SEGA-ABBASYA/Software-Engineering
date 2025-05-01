@@ -85,6 +85,9 @@
     <EmbeddedResource Include="CreateEvent.resx">
       <DependentUpon>CreateEvent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageEvents.resx">
       <DependentUpon>ManageEvents.cs</DependentUpon>
     </EmbeddedResource>

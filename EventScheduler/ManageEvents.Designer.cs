@@ -40,12 +40,12 @@ namespace EventScheduler
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid.Location = new System.Drawing.Point(13, 13);
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(775, 405);
+            this.dataGrid.Size = new System.Drawing.Size(746, 405);
             this.dataGrid.TabIndex = 0;
             // 
             // back_btn
             // 
-            this.back_btn.Location = new System.Drawing.Point(712, 457);
+            this.back_btn.Location = new System.Drawing.Point(684, 457);
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(75, 23);
             this.back_btn.TabIndex = 1;
@@ -67,7 +67,7 @@ namespace EventScheduler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 509);
+            this.ClientSize = new System.Drawing.Size(772, 509);
             this.Controls.Add(this.save_btn);
             this.Controls.Add(this.back_btn);
             this.Controls.Add(this.dataGrid);

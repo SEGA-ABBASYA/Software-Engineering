@@ -86,14 +86,14 @@ namespace EventScheduler
 
         public void SendReminderEmail(string email, string subject, string body)
         {
-            MailAddress from = new MailAddress("sega.abbasiya@gmail.com", "SEGA-ABBASIYA");
+            MailAddress from = new MailAddress("iixcellz25@gmail.com");
             MailAddress to = new MailAddress(email);
             MailMessage message = new MailMessage(from, to)
             {
                 Subject = subject, Body = body, IsBodyHtml = true
             };
             SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
-            client.Credentials = new NetworkCredential("yourUsername", "yourPassword");
+            client.Credentials = new NetworkCredential("iixcellz25@gmail.com", "awqz qczf wwlt qvcu");
             client.EnableSsl = true;
 
             client.Send(message);

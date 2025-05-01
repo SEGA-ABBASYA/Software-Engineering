@@ -43,11 +43,15 @@ namespace EventScheduler
 
         private void register_event_btn_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void crystal_1_Click(object sender, EventArgs e)
         {
+            GenerateReport1Form cs1 = new GenerateReport1Form();
+            this.Hide();
+            cs1.ShowDialog();
+            this.Show();
 
         }
 
@@ -56,6 +60,14 @@ namespace EventScheduler
             RegisterForm user = new RegisterForm();
             this.Hide();
             user.ShowDialog();
+            this.Show();
+        }
+
+        private void crystal_2_Click(object sender, EventArgs e)
+        {
+            GenerateReportForm cs = new GenerateReportForm();
+            this.Hide();
+            cs.ShowDialog();
             this.Show();
         }
     }

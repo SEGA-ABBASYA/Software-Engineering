@@ -117,6 +117,7 @@ namespace EventScheduler
             this.crystal_2.TabIndex = 7;
             this.crystal_2.Text = "Crystal Report 2";
             this.crystal_2.UseVisualStyleBackColor = true;
+            this.crystal_2.Click += new System.EventHandler(this.crystal_2_Click);
             // 
             // Form1
             // 

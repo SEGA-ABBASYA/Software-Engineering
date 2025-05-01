@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateEvent.Designer.cs">
+      <DependentUpon>CreateEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrystalReport1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -106,9 +112,15 @@
     <Compile Include="UpcomingEvents.Designer.cs">
       <DependentUpon>UpcomingEvents.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CreateEvent.resx">
+      <DependentUpon>CreateEvent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenerateReport1Form.resx">
       <DependentUpon>GenerateReport1Form.cs</DependentUpon>

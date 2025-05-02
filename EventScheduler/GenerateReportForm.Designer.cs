@@ -57,6 +57,7 @@ namespace EventScheduler
             this.minAttendeesText.Name = "minAttendeesText";
             this.minAttendeesText.Size = new System.Drawing.Size(272, 20);
             this.minAttendeesText.TabIndex = 1;
+            this.minAttendeesText.Text = "0";
             // 
             // label1
             // 

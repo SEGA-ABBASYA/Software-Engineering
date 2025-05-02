@@ -20,7 +20,7 @@ namespace EventScheduler
 {
     public partial class RegisterForm : Form
     {
-        string ordb = "Data Source=orcl;User Id=ziad;Password=ziad";
+        string ordb = "Data Source=orcl;User Id=hr;Password=hr";
         OracleConnection conn;
         int max_id, new_id;
         public RegisterForm()

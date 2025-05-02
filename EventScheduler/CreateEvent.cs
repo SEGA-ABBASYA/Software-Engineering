@@ -30,7 +30,7 @@ namespace EventScheduler
         }
 
         OracleConnection conn;
-        string connectionString = "Data Source=ORCL;User Id=ziad;Password=ziad;";
+        string connectionString = "Data Source=ORCL;User Id=hr;Password=hr;";
 
         private void CreateEvent_Load(object sender, EventArgs e)
         {

@@ -8,12 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CrystalDecisions.Shared;
+using Oracle.DataAccess.Client;
 
 namespace EventScheduler
 {
     public partial class GenerateReportForm : Form
     {
-        Report report;
+        String ordb = "Data Source=orcl;User Id=hr;Password=hr";
+        OracleConnection conn;
+        OracleCommand cmd;
+        Report report = new Report();
+
+
         public GenerateReportForm()
         {
             InitializeComponent();
@@ -21,24 +27,44 @@ namespace EventScheduler
 
         private void GenerateReportForm_Load(object sender, EventArgs e)
         {
-            report = new Report();
-            foreach(ParameterDiscreteValue val in report.ParameterFields[1].DefaultValues)
+            report.Refresh();
+            report.SetParameterValue("Minimmum Attendees", 0);
+            report.SetParameterValue("Location", "");
+
+            ReportViewer.ReportSource = report;
+           
+            conn = new OracleConnection(ordb);
+            cmd = new OracleCommand();
+            conn.Open();
+            cmd.Connection = conn;
+            cmd.CommandText = "SELECT DISTINCT location FROM EVENTS_TABLE";
+            cmd.CommandType = CommandType.Text;
+            OracleDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
             {
-                LocationCombo.Items.Add(val.Value);
+                LocationCombo.Items.Add(reader.GetString(0));
             }
+
         }
 
         private void GenerateFormButton_Click(object sender, EventArgs e)
         {
-            report = new Report();
-            foreach (ParameterDiscreteValue val in report.ParameterFields[1].DefaultValues)
+
+            report.Refresh();
+            
+            LocationCombo.Items.Clear();
+            OracleDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
             {
-                LocationCombo.Items.Add(val.Value);
+                LocationCombo.Items.Add(reader.GetString(0));
             }
 
             report.SetParameterValue(0, minAttendeesText.Text);
             report.SetParameterValue(1, LocationCombo.Text);
-            ReportViewer.ReportSource = report;
+            
+            ReportViewer.ReportSource = report; 
 
         }
 

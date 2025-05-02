@@ -8,6 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+/**
+ * 
+ * Shows User's Registered Events
+ * Grouped By Username and takes it as a parameter
+ * 
+**/
+
 namespace EventScheduler
 {
     public partial class GenerateReport1Form : Form

@@ -18,34 +18,25 @@ CREATE TABLE events_table (
 );
 
 -- PARTICIPANTS TABLE
-CREATE TABLE participants_tables (
+CREATE TABLE participants_table (
     user_id NUMBER,
     event_id NUMBER,
     CONSTRAINT fk_participants_user
         FOREIGN KEY (user_id)
-        REFERENCES users_tables(id)
+        REFERENCES users_table(id)
         ON DELETE CASCADE,
     CONSTRAINT fk_participants_event
         FOREIGN KEY (event_id)
-        REFERENCES events_tables(id)
+        REFERENCES events_table(id)
         ON DELETE CASCADE,
     CONSTRAINT pk_participants PRIMARY KEY (user_id, event_id)
 );
 
--- EVENTS SEQUENCE AND TRIGGER
+-- EVENTS SEQUENCE
 CREATE SEQUENCE events_seq
-START WITH 3
+START WITH 4
 INCREMENT BY 1
 NOCACHE;
-
-CREATE OR REPLACE TRIGGER trg_events_auto_id
-BEFORE INSERT ON events
-FOR EACH ROW
-BEGIN
-  IF :NEW.id IS NULL THEN
-    :NEW.id := events_seq.NEXTVAL;
-  END IF;
-END;
 
 
 --- Procedures
@@ -62,7 +53,7 @@ BEGIN
       FROM users_table
      WHERE UPPER(username) = UPPER(p_user_name);
 END GET_USER_BALANCE;
-
+/
 
 -- Get Users Max Id Using Only 1 Out Number Parameter
 create or replace procedure GetID (UID out number)
@@ -72,7 +63,7 @@ select max(id)
 into UID
 from users_table;
 end;
-
+/
 
 -- Selects Multiple Rows Using SysRefCursor
 CREATE OR REPLACE PROCEDURE get_events_participants(
@@ -92,7 +83,7 @@ BEGIN
         WHERE 
             TRUNC(e.event_date) = TRUNC(SYSDATE + 1);
 END;
-
+/
 
 
 -- Insertions
@@ -100,6 +91,7 @@ END;
 -- Users Insertions
 insert into users_table values
 (1, 'Ziad', 'ziadkhaled@gmail.com', 1000);
+insert into users_table values
 (2, 'Mustafa', 'must123@gmail.com', 1000);
 
 -- Events Insertions

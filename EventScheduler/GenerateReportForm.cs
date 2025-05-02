@@ -10,6 +10,17 @@ using System.Windows.Forms;
 using CrystalDecisions.Shared;
 using Oracle.DataAccess.Client;
 
+
+/**
+ * 
+ * Shows Events and its number of attendees
+ * Calculate a summary for total revenue for the event
+ * before and after calculating taxes
+ * A summary field shows the most expensive ticket 
+ * 
+**/
+
+
 namespace EventScheduler
 {
     public partial class GenerateReportForm : Form

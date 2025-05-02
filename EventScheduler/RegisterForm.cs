@@ -10,6 +10,12 @@ using System.Windows.Forms;
 using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
 
+
+/**
+ * User Registeration
+ * Used Procedure Which Selects One Row Without Using SysRefCursor
+**/
+
 namespace EventScheduler
 {
     public partial class RegisterForm : Form

@@ -174,6 +174,7 @@ namespace EventScheduler
             this.Controls.Add(this.txtName);
             this.Name = "CreateEvent";
             this.Text = "CreateEvent";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreateEvent_FormClosing_1);
             this.Load += new System.EventHandler(this.CreateEvent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numFees)).EndInit();
             this.ResumeLayout(false);

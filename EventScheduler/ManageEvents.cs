@@ -10,6 +10,15 @@ using System.Windows.Forms;
 using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
 
+
+/**
+ * 
+ *  Manage Events and Automatic Checking For Overdue Events
+ *  Funcrtional Requirement 6
+ *  Used Disconnected Mode
+ * 
+**/
+
 namespace EventScheduler
 {
     public partial class ManageEvents : Form

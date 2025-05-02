@@ -11,7 +11,17 @@ using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
 using System.Net;
 using System.Net.Mail;
-using System.Timers;
+
+
+/**
+ * 
+ * Upcoming Events Sorted With The Priority and Sending Remainder Emails
+ * Functional Requirements 2, 3
+ * Selected Rows Using Bind Variables
+ * Selected Multiple Rows Using Stored Procedures
+ * 
+ **/
+
 
 namespace EventScheduler
 {
@@ -19,7 +29,6 @@ namespace EventScheduler
     {
         string ordb = "Data Source=orcl;User Id=ziad;Password=ziad";
         OracleConnection conn;
-        private System.Timers.Timer dailyTimer;
         public UpcomingEvents()
         {
             InitializeComponent();

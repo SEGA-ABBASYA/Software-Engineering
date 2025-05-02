@@ -139,6 +139,7 @@ namespace EventScheduler
             this.Controls.Add(this.dataGridView1);
             this.Name = "AllEvents";
             this.Text = "AllEvents";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AllEvents_FormClosing);
             this.Load += new System.EventHandler(this.AllEvents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

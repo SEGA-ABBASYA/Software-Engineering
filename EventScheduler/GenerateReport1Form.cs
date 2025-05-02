@@ -25,6 +25,7 @@ namespace EventScheduler
 
         private void button1_Click(object sender, EventArgs e)
         {
+            report = new CrystalReport1();
             report.SetParameterValue(0, UserNameText.Text);
             Report1Viewer.ReportSource = report;
         }

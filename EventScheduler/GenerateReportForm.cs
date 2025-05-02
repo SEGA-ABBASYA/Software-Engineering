@@ -30,6 +30,12 @@ namespace EventScheduler
 
         private void GenerateFormButton_Click(object sender, EventArgs e)
         {
+            report = new Report();
+            foreach (ParameterDiscreteValue val in report.ParameterFields[1].DefaultValues)
+            {
+                LocationCombo.Items.Add(val.Value);
+            }
+
             report.SetParameterValue(0, minAttendeesText.Text);
             report.SetParameterValue(1, LocationCombo.Text);
             ReportViewer.ReportSource = report;

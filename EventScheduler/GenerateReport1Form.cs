@@ -12,7 +12,8 @@ namespace EventScheduler
 {
     public partial class GenerateReport1Form : Form
     {
-        CrystalReport1 report;
+        CrystalReport1 report = new CrystalReport1();
+        
         public GenerateReport1Form()
         {
             InitializeComponent();
@@ -20,12 +21,15 @@ namespace EventScheduler
 
         private void GenerateReport1Form_Load(object sender, EventArgs e)
         {
-            report = new CrystalReport1();
+            report.Refresh();
+            report.SetParameterValue(0, "");
+            Report1Viewer.ReportSource = report;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            report = new CrystalReport1();
+            report.Refresh();
             report.SetParameterValue(0, UserNameText.Text);
             Report1Viewer.ReportSource = report;
         }

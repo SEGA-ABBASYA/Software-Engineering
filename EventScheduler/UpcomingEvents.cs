@@ -17,7 +17,7 @@ namespace EventScheduler
 {
     public partial class UpcomingEvents : Form
     {
-        string ordb = "Data Source=orcl;User Id=ziad;Password=ziad";
+        string ordb = "Data Source=orcl;User Id=hr;Password=hr";
         OracleConnection conn;
         private System.Timers.Timer dailyTimer;
         public UpcomingEvents()

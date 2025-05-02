@@ -25,7 +25,7 @@ namespace EventScheduler
 
         private void ManageEvents_Load(object sender, EventArgs e)
         {
-            string constr = "Data Source=orcl; User Id=ziad; Password=ziad;";
+            string constr = "Data Source=orcl; User Id=hr; Password=hr;";
             string cmdstr = "SELECT* FROM events_table";
             adapter = new OracleDataAdapter(cmdstr, constr);
             ds = new DataSet();

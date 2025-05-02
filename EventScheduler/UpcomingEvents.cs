@@ -51,7 +51,6 @@ namespace EventScheduler
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add("status_param", OracleDbType.Varchar2).Value = check;
                 OracleDataReader reader = cmd.ExecuteReader();
-                // Setup DataGridView
                 upcoming_datagridview.Rows.Clear();
                 upcoming_datagridview.Columns.Clear();
 
@@ -73,21 +72,6 @@ namespace EventScheduler
             {
                 MessageBox.Show("Error loading events: " + ex.Message);
             }
-
-            //dailyTimer = new System.Timers.Timer(86400000);
-            //dailyTimer.AutoReset = true;
-            //dailyTimer.Elapsed += (s, ev) =>
-            //{
-            //    try
-            //    {
-            //        SendTomorrowReminders();
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show($"Error while sending reminder: {ex.Message}");
-            //    }
-            //};
-            //dailyTimer.Start();
             SendTomorrowReminders();
         }
 
@@ -131,8 +115,8 @@ namespace EventScheduler
             var reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                string eventName = reader.GetString(0);    // e.name
-                string email = reader.GetString(1);    // u.email
+                string eventName = reader.GetString(0);
+                string email = reader.GetString(1);
                 string subject = $"Reminder: {eventName} is tomorrow";
                 string body = $"Don’t forget your event “{eventName}” tomorrow";
                 SendEmail(email, subject, body);

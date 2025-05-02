@@ -26,25 +26,9 @@ CREATE TABLE participants_table (
     CONSTRAINT fk_participant_event FOREIGN KEY (event_id) REFERENCES events_table(id)
 );
 
--- USERS SEQUENCE AND TRIGGER
-CREATE SEQUENCE users_seq
-START WITH 1
-INCREMENT BY 1
-NOCACHE;
-
-CREATE OR REPLACE TRIGGER trg_users_auto_id
-BEFORE INSERT ON users
-FOR EACH ROW
-BEGIN
-  IF :NEW.id IS NULL THEN
-    :NEW.id := users_seq.NEXTVAL;
-  END IF;
-END;
-
-
 -- EVENTS SEQUENCE AND TRIGGER
 CREATE SEQUENCE events_seq
-START WITH 1
+START WITH 3
 INCREMENT BY 1
 NOCACHE;
 
@@ -58,28 +42,23 @@ BEGIN
 END;
 
 
-insert into users_table values
-(1, 'Ziad', 'ziadshraf100@gmail.com', 1000);
-insert into users_table values
-(2, 'Zoz', 'ziadshraf123@gmail.com', 1000);
+--- Procedures
 
-insert into events_table values
-(1, 'Employment Fair', 'Abbasyia', '4-Oct-2025', 'upcoming', 2, 100 );
-insert into events_table values
-(2, 'Swift', 'Zamalek', '29-Apr-2025', 'ended', 1, 0 );
-insert into events_table values
-(3, 'Google Dev Fest', 'Greek Campus', '29-Apr-2026', 'ended', 3, 0 );
-insert into events_table values
-(4, 'TechShift', 'Greek Campus', '25-Jan-2026', 'ended', 1, 0 );
+-- Get User Details Using Out Parameters
+CREATE OR REPLACE PROCEDURE GET_USER_BALANCE(
+    p_user_name  IN  VARCHAR2,
+    p_balance    OUT Number,
+    p_user_id    OUT Number
+) AS
+BEGIN
+    SELECT balance_fees, id
+      INTO p_balance, p_user_id
+      FROM users_table
+     WHERE UPPER(username) = UPPER(p_user_name);
+END GET_USER_BALANCE;
 
 
-insert into participants_table values
-( 1, 1);
-insert into participants_table values
-( 2, 2);
-
-commit
-
+-- Get Users Max Id Using Only 1 Out Number Parameter
 create or replace procedure GetID (UID out number)
 as
 begin
@@ -87,3 +66,51 @@ select max(id)
 into UID
 from users_table;
 end;
+
+
+-- Selects Multiple Rows Using SysRefCursor
+CREATE OR REPLACE PROCEDURE get_tomorrow_event_participants(
+    result_cursor OUT SYS_REFCURSOR
+) AS
+BEGIN
+    OPEN result_cursor FOR
+        SELECT 
+            e.name AS event_name,
+            u.email AS user_email
+        FROM 
+            participants_table p
+        JOIN 
+            events_table e ON p.event_id = e.id
+        JOIN 
+            users_table u ON p.user_id = u.id
+        WHERE 
+            TRUNC(e.event_date) = TRUNC(SYSDATE + 1);
+END;
+
+
+
+-- Insertions
+
+-- Users Insertions
+insert into users_table values
+(1, 'Ziad', 'ziadkhaled@gmail.com', 1000);
+(2, 'Mustafa', 'must123@gmail.com', 1000);
+
+-- Events Insertions
+insert into events_table values
+(1, 'Employment Fair', 'Abbasyia', '4-Oct-2025', 'upcoming', 2, 100 );
+insert into events_table values
+(2, 'Swift', 'Zamalek', '29-Apr-2025', 'ended', 1, 0 );
+insert into events_table values
+(3, 'Google Dev Fest', 'Greek Campus', '29-Apr-2026', 'upcoming', 3, 0 );
+
+-- Particpants Insertions
+insert into participants_table values
+(1, 1);
+insert into participants_table values
+(2, 2);
+
+
+-- Commit Updates
+commit
+

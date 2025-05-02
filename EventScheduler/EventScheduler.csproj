@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllEvents.Designer.cs">
+      <DependentUpon>AllEvents.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateEvent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     <Compile Include="UpcomingEvents.Designer.cs">
       <DependentUpon>UpcomingEvents.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AllEvents.resx">
+      <DependentUpon>AllEvents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateEvent.resx">
       <DependentUpon>CreateEvent.cs</DependentUpon>
     </EmbeddedResource>

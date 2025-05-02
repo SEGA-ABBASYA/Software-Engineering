@@ -11,6 +11,15 @@ using System.Xml.Linq;
 using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
 
+
+/**
+ *
+ * Creates Event and Automatically Checks If there is an Overlapping Event
+ * Functional Requirement 1
+ * Used Insertion Without Procedures
+ *
+**/
+
 namespace EventScheduler
 {
     public partial class CreateEvent : Form
@@ -156,6 +165,11 @@ namespace EventScheduler
         private void back_btn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void CreateEvent_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            conn.Dispose();
         }
     }
 }

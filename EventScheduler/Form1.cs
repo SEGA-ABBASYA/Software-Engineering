@@ -8,6 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+/*
+ *
+ * Main GUI Form
+ *
+ */
+
 namespace EventScheduler
 {
     public partial class Form1 : Form
@@ -43,7 +50,10 @@ namespace EventScheduler
 
         private void register_event_btn_Click(object sender, EventArgs e)
         {
-
+            AllEvents events = new AllEvents();
+            this.Hide();
+            events.ShowDialog();
+            this.Show();
         }
 
         private void crystal_1_Click(object sender, EventArgs e)

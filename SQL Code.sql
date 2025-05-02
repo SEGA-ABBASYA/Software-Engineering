@@ -18,12 +18,18 @@ CREATE TABLE events_table (
 );
 
 -- PARTICIPANTS TABLE
-CREATE TABLE participants_table (
-    user_id NUMBER NOT NULL,
-    event_id NUMBER NOT NULL,
-    CONSTRAINT pk_participants PRIMARY KEY (user_id, event_id),
-    CONSTRAINT fk_participant_user FOREIGN KEY (user_id) REFERENCES users_table(id),
-    CONSTRAINT fk_participant_event FOREIGN KEY (event_id) REFERENCES events_table(id)
+CREATE TABLE participants_tables (
+    user_id NUMBER,
+    event_id NUMBER,
+    CONSTRAINT fk_participants_user
+        FOREIGN KEY (user_id)
+        REFERENCES users_tables(id)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_participants_event
+        FOREIGN KEY (event_id)
+        REFERENCES events_tables(id)
+        ON DELETE CASCADE,
+    CONSTRAINT pk_participants PRIMARY KEY (user_id, event_id)
 );
 
 -- EVENTS SEQUENCE AND TRIGGER
@@ -69,7 +75,7 @@ end;
 
 
 -- Selects Multiple Rows Using SysRefCursor
-CREATE OR REPLACE PROCEDURE get_tomorrow_event_participants(
+CREATE OR REPLACE PROCEDURE get_events_participants(
     result_cursor OUT SYS_REFCURSOR
 ) AS
 BEGIN

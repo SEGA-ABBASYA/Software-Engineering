@@ -13,11 +13,9 @@ using Oracle.DataAccess.Types;
 
 
 /**
- *
  * Creates Event and Automatically Checks If there is an Overlapping Event
  * Functional Requirement 1
  * Used Insertion Without Procedures
- *
 **/
 
 namespace EventScheduler
